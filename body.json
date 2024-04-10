@@ -1,0 +1,9 @@
+{
+    "name": "abc1",
+    "location": "india",
+    "phone": "1111",
+    "cources": [
+      "c",
+      "c++"
+    ]
+  }
