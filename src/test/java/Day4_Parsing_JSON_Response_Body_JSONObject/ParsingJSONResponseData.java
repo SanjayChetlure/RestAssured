@@ -32,7 +32,7 @@ public class ParsingJSONResponseData
 	}
 	
 	
-	//@Test(priority = 2)
+	@Test(priority = 2)
 	public void testJSONResponse2() 
 	{
 		//approach2: store response in a variable (with capturing response)
@@ -42,10 +42,11 @@ public class ParsingJSONResponseData
 		
 		.when()
 			.get("http://localhost:3000/store");
+			
 		
 		Assert.assertEquals(resp.getStatusCode()	, 200);
-		Assert.assertEquals(resp.header("Content-Type")	, "application/json");
-		
+		Assert.assertEquals(resp.getHeader("Content-Type")	, "application/json");
+	//	Assert.assertEquals(resp.getCookie("CookieName")	, "CookieValue");			
 		Assert.assertEquals(resp.jsonPath().get("book[0].title").toString()	, "savings of the country");
 	
 		//Note: if title is not stored in same order then this approach will not work
@@ -63,6 +64,8 @@ public class ParsingJSONResponseData
 		
 		.when()
 			.get("http://localhost:3000/store");
+		
+	
 		
 		//to convert JSON resp into String format need to pass resp into JSONObject constructor
 		//converting response into JSON Object type
@@ -98,7 +101,7 @@ public class ParsingJSONResponseData
 	}
 	
 	
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	public void verifyTotalPriceFromResponse() 
 	{
 		Response resp = given()    

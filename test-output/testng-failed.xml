@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Day4_Parsing_JSON_Response_Body_JSONObject.ParsingJSONResponseData">
+      <class name="Day1_Introduction_EnvironmentSetup_HTTPMethods.Ex3_AllRequests">
         <methods>
-          <include name="verifyTotalPriceFromResponse"/>
+          <include name="getUsers"/>
         </methods>
-      </class> <!-- Day4_Parsing_JSON_Response_Body_JSONObject.ParsingJSONResponseData -->
+      </class> <!-- Day1_Introduction_EnvironmentSetup_HTTPMethods.Ex3_AllRequests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

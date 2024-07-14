@@ -8,20 +8,9 @@ import java.util.HashMap;
 
 import org.testng.annotations.Test;
 
-public class HTTPRequests 
+public class Ex2_postRequest 
 {
-//	@Test
-//	void getUsers()
-//	{
-//		given()
-//		.when()
-//			.get("https://reqres.in/api/users?page=2")
-//		.then()
-//			.statusCode(200)
-//			.body("page", equalTo(2))
-//			.log().all();		
-//	}
-	
+
 	
 	@Test
 	void createUser()
