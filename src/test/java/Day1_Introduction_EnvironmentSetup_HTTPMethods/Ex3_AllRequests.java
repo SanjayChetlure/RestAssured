@@ -47,40 +47,40 @@ public class Ex3_AllRequests
 	}
 	
 	
-//	@Test(priority = 3,dependsOnMethods = {"createUser"})
-//	void updateUser()
-//	{
-//		HashMap<String,String> mp=new HashMap<String,String>();
-//		mp.put("name", "MAHESH");
-//		mp.put("job", "TESTER");
-//		
-//		given()
-//			.contentType("application/json")
-//			.body(mp)
-//		
-//		.when()
-//			.put("https://reqres.in/api/users/"+id)
-//		
-//		.then()
-//			.statusCode(200)
-//			.log().all();
-//		
-//	}
-//	
-//	
-//	
-//	@Test(priority = 4,dependsOnMethods = {"createUser"})
-//	void deleteUser()
-//	{
-//		given()
-//		
-//		.when()
-//			.delete("https://reqres.in/api/users/"+id)
-//		
-//		.then()
-//			.statusCode(204)
-//			.log().all();
-//	}
+	@Test(priority = 3,dependsOnMethods = {"createUser"})
+	void updateUser()
+	{
+		HashMap<String,String> mp=new HashMap<String,String>();
+		mp.put("name", "MAHESH");
+		mp.put("job", "TESTER");
+		
+		given()
+			.contentType("application/json")
+			.body(mp)
+		
+		.when()
+			.put("https://reqres.in/api/users/"+id)
+		
+		.then()
+			.statusCode(200)
+			.log().all();
+		
+	}
+	
+	
+	
+	@Test(priority = 4,dependsOnMethods = {"createUser"})
+	void deleteUser()
+	{
+		given()
+		
+		.when()
+			.delete("https://reqres.in/api/users/"+id)
+		
+		.then()
+			.statusCode(204)
+			.log().all();
+	}
 	
 	
 	
